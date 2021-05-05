@@ -50,20 +50,71 @@ const transformers = [
         cybertron: ["Autobot", "Decepticon"]
     },
 ]
-let transformerName = document.getElementsByClassName("name");
-// console.log(transformerName)
-let t = 0;
+let transformerName = document.querySelector(".name");
+let f = 0;
+let finishedOptimus = false
+let addScore = document.querySelector(".score");
+
 showQuestion();
 
-function showQuestion() {    
-    for ( let i=0; i<transformers.length; i++){
-        t+=1
-        transformerName = transformers[0].transformer;
+function showQuestion() { 
+    if (finishedOptimus){
+        f+=1
     }
+    if (f >= transformers.length){
+        transformerName = "Good Game!"
+    } else {
+    transformerName.innerHTML = transformers[f].transformer;   
+}
 }
 
+const submitButton = document.querySelector(".submit");
+submitButton.addEventListener("click", checkAnswer)
+function checkAnswer(){  
+    let selectedValue = "";
+    const rbs = document.querySelectorAll('input[name="transformer"]')
+    for (const rb of rbs){
+        if (rb.checked){
+            selectedValue = rb.value;
+            break;
+        }
+    }
+    console.log(f)
+    if(f <10 && selectedValue == transformers[f].faction){
+    console.log("yay"); 
+    finishedOptimus = true
+    }
+    showQuestion();
+}
 
-// console.log(transformers[t].transformer);
+// if( f === 0){
+    //     f+=1
+    // }
+ //compare user answer to actual answer
+//declare function for checking answers  
+
+     // for ( let i=0; i<transformers.length; i++){      
+    // }
+  // console.log(selectedValue)
+    // console.log(transformers[0].faction)
+        //correct answer is key value pair in transformers variable (array of objects)
+        //https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
+    //using if else statement -- 
+        //if correct add score move to next question
+        //else dont add score and move to next question 
+    //call show question function 
+// let selectedValue = ""
+// submitButton.onclick = function (){
+
+//     alert(selectedValue);
+// }
+
+
+
+
+    // ============= Code graveyard
+// console.log(transformers[t].faction)
+// console.log(transformers[f].transformer);
     //console.log(transformers[0])
         // for( let transformer of transformers){
         //     console.log(transformer);
@@ -89,14 +140,7 @@ function showQuestion() {
 // console.log("I'm here.");
 
 
-//declare function for checking answers
-    //compare user answer to actual answer
-        //correct answer is key value pair in transformers variable (array of objects)
-        //https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
-    //using if else statement -- 
-        //if correct add score move to next question
-        //else dont add score and move to next question 
-    //call show question function 
+
 
 // RANDOM CODE.
 // for (let i=0; i>transformers.length; i++){
