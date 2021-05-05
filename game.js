@@ -50,16 +50,20 @@ const transformers = [
         cybertron: ["Autobot", "Decepticon"]
     },
 ]
-// I did a lot of reading and testing. I feel like I have an better understanding of objects in arrays.
-//I still just need to figure out how to access keys! Any help would be appreciated. 
-// let transformerName = document.getElementsByClassName("name");
+let transformerName = document.getElementsByClassName("name");
+// console.log(transformerName)
+let t = 0;
+showQuestion();
 
-    // showQuestion();
-    // function showQuestion() {    
-    //     for ( let i=0; i<transformers.length; i++){
-    //         console.log(i, transformers[0]);
-    //     }
-    // }
+function showQuestion() {    
+    for ( let i=0; i<transformers.length; i++){
+        t+=1
+        transformerName = transformers[0].transformer;
+    }
+}
+
+
+// console.log(transformers[t].transformer);
     //console.log(transformers[0])
         // for( let transformer of transformers){
         //     console.log(transformer);
@@ -128,3 +132,4 @@ const transformers = [
 //     }
 // }
 // showProps(transformers)
+// console.log(transformers)
