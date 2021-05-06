@@ -55,6 +55,7 @@ let f = 0;
 let finishedOptimus = false
 let score = document.querySelector(".score");
 let currentScore = 0;
+const reset = document.querySelector(".reset");
 
 showQuestion();
 displayScore()
@@ -73,6 +74,7 @@ function showQuestion() {
     if (f >= transformers.length){
         transformerName.innerHTML = "Good Game!";
         alert("Game Over! You played well, just rememember:\r\nSometimes even the wisest of man or machine can make an error.\r\n-Optimus Prime")
+        document.querySelector(".submit").disabled = true;
     } else {
     transformerName.innerHTML = transformers[f].transformer;   
 }
@@ -101,6 +103,11 @@ function checkAnswer(){
     }
     showQuestion();
 }
+
+reset.addEventListener("click", refreshPage)
+function refreshPage(){
+        location.reload();
+    }
 
 
 
