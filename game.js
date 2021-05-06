@@ -53,9 +53,18 @@ const transformers = [
 let transformerName = document.querySelector(".name");
 let f = 0;
 let finishedOptimus = false
-let addScore = document.querySelector(".score");
+let score = document.querySelector(".score");
+let currentScore = 0;
 
 showQuestion();
+displayScore()
+
+function addScore(){
+    currentScore++;
+}
+function displayScore(){
+    score.textContent = `${currentScore}/${transformers.length}`
+}
 
 function showQuestion() { 
     if (finishedOptimus){
@@ -81,11 +90,18 @@ function checkAnswer(){
     }
     console.log(f)
     if(f <10 && selectedValue == transformers[f].faction){
-    console.log("yay"); 
+    addScore();
+    displayScore();
     finishedOptimus = true
+    } else {
+        (f <10 && selectedValue != transformers[f].faction)
+        alert("Not quite! On to the next...")
+
     }
     showQuestion();
 }
+
+
 
 // if( f === 0){
     //     f+=1
