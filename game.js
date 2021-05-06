@@ -68,14 +68,15 @@ function displayScore(){
 
 function showQuestion() { 
     if (finishedOptimus){
-        f+=1
+        f+=1 
     }
     if (f >= transformers.length){
-        transformerName = "Good Game!"
+        transformerName.innerHTML = "Good Game!";
+        alert("Game Over! You played well, just rememember:\r\nSometimes even the wisest of man or machine can make an error.\r\n-Optimus Prime")
     } else {
     transformerName.innerHTML = transformers[f].transformer;   
 }
-}
+} 
 
 const submitButton = document.querySelector(".submit");
 submitButton.addEventListener("click", checkAnswer)
@@ -100,6 +101,25 @@ function checkAnswer(){
     }
     showQuestion();
 }
+
+
+
+
+
+
+
+// { 
+//     if (finishedOptimus){
+//         f+=1 
+//     }
+//     if (f >= transformers.length){
+//         transformerName = "Good Game!"
+//     } else {
+//     transformerName.innerHTML = transformers[f].transformer;   
+// }
+// }
+
+
 
 
 
