@@ -1,14 +1,14 @@
 # PAPgame.github.io
 
-                                                              #Transformers Trivia!
+                                                              Transformers Trivia!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-##Description:
+## Description:
 Pachel Pederson created this Autobot or Decepticon trivia game 05/06/2021.
 The purpose of this game is to test the users knowledge of all the major players from Cybertron.
 
-##BriefExample:
+## BriefExample:
 
-![alt text] (H:\sei\projects\PAPgame.github.io\TransformersGame.png)
+![alt text](H:\sei\projects\PAPgame.github.io\TransformersGame.png)
 
 
 
