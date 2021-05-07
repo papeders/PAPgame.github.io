@@ -19,7 +19,7 @@ HTML
 JavaScript
 
 # Installation instructions:
-https://papeders.github.io/PAPgame.github.io/git add
+https://papeders.github.io/PAPgame.github.io/
 
 # Contribution guidelines:
 
